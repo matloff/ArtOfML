@@ -1,6 +1,6 @@
 # The Art of Machine Learning, NSP 2023
 
-<img src="FrontCover.png" alt="Front cover" width="200" height="200">
+![Front cover](FrontCover.png)
 
 Hi, everyone.  Norm Matloff of UC Davis here, author of this book.  I do
 research, teach and write in computer science and statistics ([see my
