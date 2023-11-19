@@ -64,7 +64,7 @@ There are special recurring sections and chapters throughout book:
 
 ### Code
 
-The R code for all the examples is [here]().
+The R code for all the examples is [here](Code/AllCodeOrdered.R).
 
 ### Errata
 
