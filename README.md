@@ -68,4 +68,4 @@ The R code for all the examples is [here]().
 
 ### Errata
 
-Correction of errors, and various clarifications, are [here]().
+Correction of errors, and various clarifications, are [here](Errata/Errata.md).
