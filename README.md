@@ -60,3 +60,12 @@ There are special recurring sections and chapters throughout book:
 
 * **The Verdict** sections summarize the pros and cons of the methods under discussion.
 
+## Resources
+
+### Code
+
+The R code for all the examples is [here]().
+
+### Errata
+
+Correction of errors, and various clarifications, are [here]().
