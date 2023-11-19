@@ -69,3 +69,8 @@ The R code for all the examples is [here](Code/AllCodeOrdered.R).
 ### Errata
 
 Correction of errors, and various clarifications, are [here](Errata/Errata.md).
+
+### NSP book site
+
+The NSP Web page for this book is [here](https://nostarch.com/art-machine-learning).  It contains brief and detailed versions of the Table of Contents, as well as a sample chapter.
+
