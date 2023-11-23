@@ -1,4 +1,8 @@
 
+**data.table's and tibbles** Version 1.1 of **qeML** converts them to data frames in the qeX functions, but not in the predict.qeX ones. This will be fixed in Version 1.2, but for now, call **as.data.frame()** on the data on which you wish to predict.
+
+**day1 dataset** The first two columns are day number and date, and should not generally be used for prediction.
+
 **p.12** The value 12.0 near the top of the page should be 12.8,
 consistent with the one later on that page.
 
