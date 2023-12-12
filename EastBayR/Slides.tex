@@ -1,0 +1,244 @@
+\documentclass{beamer} 
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{relsize}
+\usepackage{listings}
+
+\lstset{language=R}
+
+\mode<presentation>
+{ \usetheme{Hannover} }
+
+\title{New Book, ``The Art of Machine Learning''}
+\subtitle{and Intro to the qeML Package}
+\author{Norm Matloff \\
+University of California, Davis \\
+}
+
+\date{
+December 12, 2023 
+}
+
+\begin{document} 
+
+% \lstset{language=R}
+\lstset{language=R,basicstyle=\smaller,commentstyle=\rmfamily\smaller,
+   showstringspaces=false,
+   xleftmargin=4ex,literate={<-}{{$\leftarrow$}}1 {~}{{$\sim$}}1}
+
+\begin{frame}
+\titlepage
+
+% URL for these slides (repeated on final slide):
+% \url{http://heather.cs.ucdavis.edu/parmatpows/Slides.pdf}
+
+\end{frame}
+
+\begin{frame} 
+\frametitle{Why Yet Another ML Book?}\pause
+
+\begin{itemize}
+
+\item Almost all books are either 
+
+   \begin{itemize}
+
+   \item math-heavy or
+
+   \item ``cookbooks,'' step-by-step ``recipes,'' or
+
+   \item both
+
+   \end{itemize} 
+   \pause
+
+\item ML is an \textit{art}, not a science
+
+   \begin{itemize}
+
+   \item Note my previous NSP ``Art of '' books:
+
+   \begin{itemize}
+
+      \item \textit{The Art of R Programming}
+   
+      \item \textit{The Art of Debugging}
+
+   \end{itemize} 
+
+   \item ML is typically taught in a ``What function should I call,
+   and with what arguments?'' mode
+
+   \end{itemize} 
+
+\pause
+\item My goal is to enable the reader to \textit{use} ML in the real
+world.
+\pause
+
+\item NO MATH IS USED (just slope of line), but INTUITION is centrally
+important.
+\pause
+What do these methods REALLY do?
+
+\end{itemize} 
+
+\end{frame} 
+
+\begin{frame} 
+\frametitle{Chapter Outline}
+\pause
+
+\begin{itemize}
+
+\item Prologue: Regression problems, illustrated with k-NN
+
+\item Prologue: Classification problems, illustrated with k-NN
+
+\item Bias, Variance, Overfitting
+
+\item Dealing with Large Numbers of Features
+
+\item Decision Tress
+
+\item Tweaking the Tress
+
+\item Finding a Good Set of Hyperparamters
+
+\item Parametric Methods:  Linear, generalized linear models
+
+\item Parametric Methods:  Shrinkage-based models
+
+\item Parametric Methods:  Support Vector Machines
+
+\item Parametric Methods:  Neural networks
+
+\item Image classification
+
+\item Time Series and Text
+
+\end{itemize} 
+
+\end{frame} 
+
+\begin{frame} 
+\frametitle{Recurring Sections: the Bias-Variance Tradeoff}% pause
+
+\begin{itemize}
+
+\item Supremely important---18,400,000 results to my Google query.
+
+\item Yet most books just devote one or two \textit{very vague}
+sentences to it.
+
+\item Sections 1.7, call of Chapter 3, 4.3.6, 6.1, 6.3.5, 9.3.2, 11.10, 13.4
+
+\item Example: k-Nearest Neighbors, Section 1.7
+
+\begin{itemize}
+
+\item if k is small, not many neighbors, a small ``sample''---hence large
+\textbf{variance} 
+
+\item if k is large, some neighbors are quite distant,
+hence a \textbf{bias}; e.g. Y = weight, X = height
+
+\end{itemize} 
+
+\item Advantages and disadvantages of parametric models, including
+polynomial regression.
+
+\end{itemize} 
+
+\end{frame} 
+
+\begin{frame} 
+\frametitle{Recurring Sections: Pitfalls}\pause
+
+\begin{itemize}
+
+\item Sections 1.13, 1.14, 1.15, 1.16, 2.2.1, 2.2.2, 2.2.5, 2.4, 2.7.5,
+5.3.1, 11.8, Appendix D
+
+\item Example: Random Forests, Setion 5.3.1: 
+
+   \begin{itemize}
+   
+   \item NYC taxi data (n=10000 version) 
+   
+   \item potentially 29,315
+   pickup and dropoff combinations! 
+   
+   \item we aim roughly for $p < \sqrt{m}$;
+   
+   \item \textbf{partykit} package error message, ``too many levels'' 
+   
+   \item possibly consolidate or even use latitude-longitude embedding
+   
+   \end{itemize} 
+
+\end{itemize} 
+
+\end{frame} 
+
+\begin{frame} 
+\frametitle{Statistics vs.\ CS}\pause
+
+\begin{itemize} 
+
+\item Old Breiman ``Two Cultures'' essay still applies.
+
+\item Sampling variation vs.\ ``the data.''
+
+\item E.g. grid search for hyperpaamter tuning includes standard errors.
+
+\item Statistics $\iff$ CS Translator, e.g.\ \textit{prediction}
+$\iff$ \textit{inference}
+
+\end{itemize} 
+
+\end{frame}
+
+\begin{frame}[fragile] 
+\frametitle{The qeML Package}
+\pause
+
+\begin{itemize}
+
+\item On CRAN.
+
+\item Independent of the book. 
+
+\item ``Quick and Easy'' ML
+
+\item Uniform, {\Large SIMPLE} user interface.  
+
+\item Various default options.
+
+\begin{lstlisting}
+z <- qeRF(svcensus,'wageinc')
+\end{lstlisting} 
+
+One simple call, that's all!  No clumsy setup needed.
+
+\item ``Easy for learners, powerful for advanced users''
+
+\item Excellent for teaching:
+
+\begin{itemize}
+
+\item {\Large SIMPLE} user interface.
+
+\item Many built-in datasets.
+
+\item Includes a number of built-in ML tutorials.
+
+\end{itemize} 
+
+\end{itemize} 
+
+\end{frame} 
+
+\end{document} 
+
