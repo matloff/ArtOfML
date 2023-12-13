@@ -17,6 +17,7 @@ University of California, Davis \\
 }
 
 \date{
+East Bay R Users Group \\
 December 12, 2023 
 }
 
@@ -100,19 +101,19 @@ What do these methods REALLY do?
 
 \item Dealing with Large Numbers of Features
 
-\item Decision Tress
+\item Decision Trees
 
 \item Tweaking the Tress
 
 \item Finding a Good Set of Hyperparamters
 
-\item Parametric Methods:  Linear, generalized linear models
+\item Linear, generalized linear models
 
-\item Parametric Methods:  Shrinkage-based models
+\item Shrinkage-based models
 
-\item Parametric Methods:  Support Vector Machines
+\item Support Vector Machines
 
-\item Parametric Methods:  Neural networks
+\item Neural networks
 
 \item Image classification
 
@@ -132,7 +133,7 @@ What do these methods REALLY do?
 \item Yet most books just devote one or two \textit{very vague}
 sentences to it.
 
-\item Sections 1.7, call of Chapter 3, 4.3.6, 6.1, 6.3.5, 9.3.2, 11.10, 13.4
+\item Sections 1.7, all of Chapter 3, 4.3.6, 6.1, 6.3.5, 9.3.2, 11.10, 13.4
 
 \item Example: k-Nearest Neighbors, Section 1.7
 
@@ -170,7 +171,8 @@ polynomial regression.
    \item potentially 29,315
    pickup and dropoff combinations! 
    
-   \item we aim roughly for $p < \sqrt{m}$;
+   \item we aim roughly for $p < \sqrt{n}$ (though note \textit{double
+   descent} etc.)
    
    \item \textbf{partykit} package error message, ``too many levels'' 
    
@@ -191,7 +193,7 @@ polynomial regression.
 
 \item Sampling variation vs.\ ``the data.''
 
-\item E.g. grid search for hyperpaamter tuning includes standard errors.
+\item E.g. grid search for hyperparameter tuning includes standard errors.
 
 \item Statistics $\iff$ CS Translator, e.g.\ \textit{prediction}
 $\iff$ \textit{inference}
@@ -214,13 +216,13 @@ $\iff$ \textit{inference}
 
 \item Uniform, {\Large SIMPLE} user interface.  
 
-\item Various default options.
-
 \begin{lstlisting}
 z <- qeRF(svcensus,'wageinc')
 \end{lstlisting} 
 
 One simple call, that's all!  No clumsy setup needed.
+
+\item Various default options.
 
 \item ``Easy for learners, powerful for advanced users''
 
@@ -232,11 +234,46 @@ One simple call, that's all!  No clumsy setup needed.
 
 \item Many built-in datasets.
 
-\item Includes a number of built-in ML tutorials.
+\item Includes a number of built-in ML tutorials vignettes, no
+background needed.
 
 \end{itemize} 
 
+\item Various utlities, e.g.\ for factor manipulation.
+
 \end{itemize} 
+
+\end{frame} 
+
+\begin{frame} 
+\frametitle{Example: Comparison of Various ML Methods}
+\pause
+
+\begin{itemize}
+
+\item All \textbf{qeML} predictive functions do automatic cross-validation.
+
+\item Test accuracy in the \textbf{\$testAcc} component of the returned object.
+
+\item Also \textbf{\$baseAcc}, accuracy of prediction without X, for
+comparison.
+
+\end{itemize} 
+
+\end{frame} 
+
+\begin{frame} 
+\frametitle{Example}
+\pause
+
+Predict wage income in 2000 Census dataset, from age, gender, education and
+tech occupation.
+
+\includegraphics[scale=0.35]{cmp4ml.png}
+
+Horizontal axis is (indexed) k, min leaf size etc.
+
+Winner is good ol' polynomial regression!
 
 \end{frame} 
 
