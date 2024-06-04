@@ -24,4 +24,9 @@ qeROC(dataIn, qeOut, yLevelName)
 Accordingly, the argument 'V7' in the calls to **qeROC** should not be
 there.
 
+**p.34** The Telco Churn dataset has moved. It is now
+
+[here](https://www.kaggle.com/datasets/blastchar/telco-customer-chur)
+
+
 
