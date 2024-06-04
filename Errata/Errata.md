@@ -26,7 +26,7 @@ there.
 
 **p.34** The Telco Churn dataset has moved. It is now
 
-[here](https://www.kaggle.com/datasets/blastchar/telco-customer-chur)
+[here](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 
 
